@@ -7,7 +7,7 @@
         "reactions": {
             "like": 9,
             "love": 15,
-            "hate": 1,
+            "angry": 1,
             "surprise": 7
         },
         "created_at": "12/05/2018 14:56"
@@ -20,7 +20,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "12/05/2019 12:45"
@@ -33,7 +33,7 @@
         "reactions": {
             "like": 6,
             "love": 2,
-            "hate": 8,
+            "angry": 8,
             "surprise": 11
         },
         "created_at": "12/05/2010 11:30"
@@ -46,7 +46,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "12/05/2019 12:45"
@@ -59,7 +59,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "12/05/2019 12:45"
@@ -72,7 +72,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "12/05/2019 12:45"
@@ -85,7 +85,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "12/05/2019 12:45"
@@ -98,7 +98,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "12/05/2019 12:45"
@@ -111,7 +111,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "15/05/2019 11:45"
@@ -124,7 +124,7 @@
         "reactions": {
             "like": 1,
             "love": 7,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "17/05/2019 12:45"
@@ -137,7 +137,7 @@
         "reactions": {
             "like": 1,
             "love": 9,
-            "hate": 5,
+            "angry": 5,
             "surprise": 2
         },
         "created_at": "19/05/2019 12:45"
