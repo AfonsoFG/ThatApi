@@ -2,7 +2,7 @@ const express = require('express');
 const port = process.env.PORT || 3001;
 const app = express();
 const posts = require('./posts.json');
-const comentarios = require('./comentarios.json')
+const comments = require('./comments.json')
 
 
 app.listen(port, () => {
@@ -18,8 +18,7 @@ app.use(function(req, res, next) {
 app.get('/', function (req, res) {
     var d = new Date();
     var n = d.toLocaleTimeString();
-    // console.log(req);
-    res.send(n + '<br>Olá <b>mundo</b>!<br>DO GITHUB')
+    res.send(n + '<br>Olá <b>mundo</b>!')
 });
 
 app.get('/posts', function (req, res) {
@@ -30,26 +29,24 @@ app.get('/post/:id', function (req, res) {
     const p =  posts.find((post) => {
         return post.id == req.params.id
     });
-    /*
 
-    if (req.query.q === 'comentarios') {
-        const resultados = comentarios.filter(
-            comentario => comentario.post_id == req.params.id
+    if (req.query.q === 'comments') {
+        const results = comments.filter(
+            comment => comment.post_id == req.params.id
         );
 
-        p.comentario = resultados;
+        p.comments = results;
     }
-*/
     res.json(p);
 });
 
-app.get('/comentarios', function (req, res) {
-    res.json(comentarios);
+app.get('/comments', function (req, res) {
+    res.json(comments);
 });
 
-app.get('/comentario/:id', function (req, res) {
-    const c =  comentarios.find((comentario) => {
-        return comentario.id == req.params.id
+app.get('/comment/:id', function (req, res) {
+    const c =  comments.find((comment) => {
+        return comment.id == req.params.id
     });
     res.json(c);
 });
