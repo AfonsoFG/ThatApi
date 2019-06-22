@@ -30,6 +30,7 @@ app.get('/post/:id', function (req, res) {
     const p =  posts.find((post) => {
         return post.id == req.params.id
     });
+    /*
 
     if (req.query.q === 'comentarios') {
         const resultados = comentarios.filter(
@@ -38,7 +39,7 @@ app.get('/post/:id', function (req, res) {
 
         p.comentario = resultados;
     }
-
+*/
     res.json(p);
 });
 
