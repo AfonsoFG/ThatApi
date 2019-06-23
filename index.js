@@ -63,7 +63,9 @@ app.put('/updateReactions', function (req, res) {
         return post.id == req.body.post_id
     });
 
-    res.json(req.body)
+    p.reactions[rec.body.reaction] = req.body.value;
+
+    res.json(p)
 
 });
 
