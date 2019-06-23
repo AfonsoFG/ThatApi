@@ -17,10 +17,9 @@
     "cors": "^2.8.5",
     "fs": "0.0.1-security",
     "helmet": "^3.18.0",
-    "morgan": "^1.9.1",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
-
     "nodemon": "^1.19.0"
   }
 }
