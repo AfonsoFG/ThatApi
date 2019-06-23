@@ -40,7 +40,7 @@ app.get('/post/:id', function (req, res) {
     res.json(p);
 });
 
-app.put('/updateReactions/:id', function (req, res) {
+app.get('/updateReactions/:id', function (req, res) {
     const p =  posts.find((post) => {
         return post.id == req.params.id
     });
@@ -49,6 +49,10 @@ app.put('/updateReactions/:id', function (req, res) {
 });
 
 app.get('/comments', function (req, res) {
+    res.json(comments);
+});
+
+app.post('/comments', function (req, res) {
     res.json(comments);
 });
 
