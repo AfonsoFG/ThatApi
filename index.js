@@ -70,7 +70,6 @@ app.put('/updateReactions/:id', function (req, res) {
 
 
 
-
 app.get('/comments', function (req, res) {
     res.json(comments);
 });
