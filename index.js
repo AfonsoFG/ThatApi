@@ -40,7 +40,19 @@ app.get('/', function (req, res) {
 });
 
 app.get('/posts', function (req, res) {
-    res.json(posts);
+    
+    const p =  posts;
+
+    if (req.query.q === 'comments') {
+        p.map((post) => {
+            const results = comments.filter(
+                comment => comment.post_id == post.id
+            );            
+            post.comments_count = results.length;
+        });
+    }
+
+    res.json(p);
 });
 
 app.get('/post/:id', function (req, res) {
