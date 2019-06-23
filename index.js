@@ -57,15 +57,14 @@ app.get('/post/:id', function (req, res) {
     res.json(p);
 });
 
-app.put('/updateReactions/:id', function (req, res) {
+app.put('/updateReactions', function (req, res) {
+
     const p =  posts.find((post) => {
-        return post.id == req.params.id
+        return post.id == req.body.post_id
     });
 
-    res.send('welcome, ' + req.body)
+    res.json(req.body)
 
-
-   // res.json(p);
 });
 
 
