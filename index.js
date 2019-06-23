@@ -40,6 +40,15 @@ app.get('/post/:id', function (req, res) {
     res.json(p);
 });
 
+app.put('/updateReactions/:id', function (req, res) {
+    const p =  posts.find((post) => {
+        return post.id == req.params.id
+    });
+
+    res.json(p);
+});
+
+
 app.get('/updateReactions/:id', function (req, res) {
     const p =  posts.find((post) => {
         return post.id == req.params.id
