@@ -1,8 +1,25 @@
 const express = require('express');
 const port = process.env.PORT || 3001;
 const app = express();
+const helmet = require('helmet');
+const morgan = require('morgan');
+const cors = require('cors');
 const posts = require('./posts.json');
 const comments = require('./comments.json')
+const fs = require('fs');
+const bodyParser = require('body-parser')
+
+// Security with Helmet
+app.use(helmet());
+
+// enable  CORS requests
+app.use(cors());
+
+// Log HTTP requests
+app.use(morgan('combined'));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 app.listen(port, () => {
@@ -45,17 +62,14 @@ app.put('/updateReactions/:id', function (req, res) {
         return post.id == req.params.id
     });
 
-    res.json(p);
+    res.send('welcome, ' + req.body)
+
+
+   // res.json(p);
 });
 
 
-app.get('/updateReactions/:id', function (req, res) {
-    const p =  posts.find((post) => {
-        return post.id == req.params.id
-    });
 
-    res.json(p);
-});
 
 app.get('/comments', function (req, res) {
     res.json(comments);
