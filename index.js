@@ -9,6 +9,7 @@ const comments = require('./comments.json')
 const fs = require('fs');
 const bodyParser = require('body-parser')
 
+
 // Security with Helmet
 app.use(helmet());
 
@@ -59,14 +60,31 @@ app.get('/post/:id', function (req, res) {
 
 app.put('/updateReactions', function (req, res) {
 
-    const p =  posts.find((post) => {
-        return post.id == req.body.post_id
+    const p =  posts.map((post) => {
+        post.reactions[req.body.reaction] = post.id == req.body.post_id ? req.body.value : post.reactions[req.body.reaction];
+        return post;
     });
 
-    p.reactions[rec.body.reaction] = req.body.value;
+    let resposta = {
+        success: false,
+        msg: ''
+    };
 
-    res.json(p)
+    try {
 
+        fs.writeFileSync('./posts.json', JSON.stringify(p))
+
+        resposta.success = true;
+        resposta.msg = 'Reaction casted!'
+
+    } catch (err) {
+
+        resposta.msg = 'Error writing to file'    
+
+    }
+   
+    res.json(resposta)
+    
 });
 
 
@@ -76,7 +94,36 @@ app.get('/comments', function (req, res) {
 });
 
 app.post('/comments', function (req, res) {
-    res.json(comments);
+
+    const new_comment_id = comments.length + 1;
+
+    const new_comment = {
+        id: new_comment_id,
+        post_id: req.body.post_id,
+        author: req.body.author,
+        email: req.body.email,
+        date: req.body.date,
+        content: req.body.content
+    }
+
+    comments.push(new_comment);
+
+    let resposta = {
+        success: false,
+        msg: ''
+    };
+
+    try {
+        fs.writeFileSync('./comments.json', JSON.stringify(comments))
+        resposta.success = true;
+        resposta.msg = 'Comment added!'
+    } catch (err) {
+        resposta.msg = 'Error adding comment!'    
+    }
+
+    console.log(comments);
+   
+    res.json(resposta)
 });
 
 app.get('/comment/:id', function (req, res) {

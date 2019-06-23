@@ -4,7 +4,7 @@
         "post_id": 2,
         "author": "Afonso Gomes",
         "email": "eu@afonsogomes.com",
-        "data": "12/05/2017 14:30",
+        "data": "14:30 12/05/2017",
         "content": "COM 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
 
     },
@@ -13,7 +13,7 @@
         "post_id": 1,
         "author": "Afonso Penaf",
         "email": "eu@afonsogomes.com",
-        "data": "12/05/2017 20:30",
+        "data": "20:30 12/05/2017",
         "content": "COM 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. :)"
         
     },
@@ -22,7 +22,7 @@
         "post_id": 1,
         "author": "Afonso Gomes",
         "email": "eu@afonsogomes.com",
-        "data": "12/05/2019 19:30",
+        "data": "19:30 12/05/2019",
         "content": "COM 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation" 
     }
 ]
